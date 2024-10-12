@@ -21,6 +21,7 @@ body {
   list-style-type: none; /* Remove marcadores da lista */
   align-items: center; /* Alinha itens verticalmente ao centro */
   padding: 16px; /* Preenchimento interno */
+  margin: 0; /* Remove margens adicionais */
   background-color: #000; /* Fundo preto */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
@@ -37,7 +38,7 @@ body {
 .centro2 {
   display: flex; /* Usando flexbox para centralizar */
   justify-content: center; /* Centraliza horizontalmente */
-  margin: 20px 0; /* Margem vertical */
+  margin: 0; /* Remover margens verticais */
 }
 
 /* Estilo para imagens de perfil */
