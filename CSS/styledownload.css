@@ -47,6 +47,14 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/*foto*/
+.img1 {
+  max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+  height: auto;    /* Mantém a proporção da imagem */
+  border-radius: 10px; /* Adiciona bordas arredondadas, se desejado */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+}
+
 /* Textura do botão*/
 .download-button {
     color: red; /* Cor vermelha */
