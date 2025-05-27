@@ -126,8 +126,8 @@
         
         // Recarrega a página (método alternativo)
         setTimeout(() => {
-            window.location.href = window.location.href; // Mais confiável que reload()
-        }, reloadDelay);
+            window.location.reload();
+        }, 3000);
     }
     
     // Handlers de eventos
@@ -171,12 +171,4 @@
     console.error = function() { triggerLock(); };
     console.info = function() { triggerLock(); };
     
-    // Proteção extra para GitHub Pages
-    if (window.location.hostname.includes('github.io')) {
-        setInterval(() => {
-            if (document.getElementById('devtools-blocker') === null) {
-                triggerLock();
-            }
-        }, 2000);
-    }
 })();
