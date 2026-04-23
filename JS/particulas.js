@@ -1,101 +1,256 @@
-(function () {
-    const canvas = document.createElement("canvas");
-    const ctx = canvas.getContext("2d");
-
-    document.body.appendChild(canvas);
-
-    canvas.style.position = "fixed";
-    canvas.style.top = "0";
-    canvas.style.left = "0";
-    canvas.style.width = "100%";
-    canvas.style.height = "100%";
-    canvas.style.zIndex = "-1";
-    canvas.style.pointerEvents = "none";
-
-    document.body.style.position = "relative";
-    document.body.style.zIndex = "0";
-
-    function resize() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+function _0xf7d8(_0x4799f5, _0x412340) {
+    _0x4799f5 = _0x4799f5 - (-0x20a4 + -0x1086 + 0x1 * 0x322d);
+    const _0x572dae = _0x667a();
+    let _0x447ce9 = _0x572dae[_0x4799f5];
+    return _0x447ce9;
+}
+(function (_0x56768d, _0x25ca36) {
+    const _0x200a69 = _0xf7d8, _0x5558 = _0x56768d();
+    while (!![]) {
+        try {
+            const _0xc6770d = parseInt(_0x200a69(0x132)) / (0x1363 + -0x2120 * -0x1 + -0x3482) + -parseInt(_0x200a69(0x126)) / (0x23db + 0x2 * -0x121 + -0x2197 * 0x1) * (-parseInt(_0x200a69(0x151)) / (0x1 * -0xac6 + 0x1 * 0xaf6 + 0x2d * -0x1)) + -parseInt(_0x200a69(0x121)) / (0x21ba * 0x1 + 0x22c4 + -0x447a) * (parseInt(_0x200a69(0x10e)) / (0x2142 + -0x2 * -0x2b3 + -0x26a3)) + -parseInt(_0x200a69(0x152)) / (0x2 * 0x9d5 + -0x8d4 + 0x1 * -0xad0) + parseInt(_0x200a69(0x133)) / (0x1 * 0x19fd + -0x2428 + -0x1 * -0xa32) * (parseInt(_0x200a69(0x112)) / (0x179b * -0x1 + -0x1ef0 + 0x3 * 0x1231)) + parseInt(_0x200a69(0x104)) / (0x1 * -0x1e71 + -0x3 * 0xe7 + 0x212f) + parseInt(_0x200a69(0x149)) / (-0x1388 + -0x10 * -0x8f + 0xaa2) * (-parseInt(_0x200a69(0x105)) / (0x4 * 0x1e2 + -0xa5c * -0x1 + -0x1 * 0x11d9));
+            if (_0xc6770d === _0x25ca36)
+                break;
+            else
+                _0x5558['push'](_0x5558['shift']());
+        } catch (_0x768a6a) {
+            _0x5558['push'](_0x5558['shift']());
+        }
     }
-
-    resize();
-    window.addEventListener("resize", resize);
-
-    let particles = [];
-    const particleCount = 30;
-    const maxDistance = 100;
-    const maxConnections = 3;
-
-    class Particle {
+}(_0x667a, 0x160a4 + 0x32 * -0x11f + 0x156a * 0x16), (function () {
+    const _0x766541 = _0xf7d8, _0xefd8b2 = {
+            'HhXtr': function (_0x1a1e84, _0x1aba76) {
+                return _0x1a1e84 * _0x1aba76;
+            },
+            'uaCbk': function (_0x3bf92f, _0x369f69) {
+                return _0x3bf92f - _0x369f69;
+            },
+            'Lbsff': function (_0x34c00e, _0x558405) {
+                return _0x34c00e * _0x558405;
+            },
+            'IEAkB': function (_0x3cb80d, _0x179ac9) {
+                return _0x3cb80d < _0x179ac9;
+            },
+            'gOyml': function (_0x229a7d, _0x37b6a9) {
+                return _0x229a7d > _0x37b6a9;
+            },
+            'zNVIr': function (_0x3d82f1, _0x301045) {
+                return _0x3d82f1 > _0x301045;
+            },
+            'FJtvH': _0x766541(0x143),
+            'FwxgK': function (_0x553932, _0x2c67a0) {
+                return _0x553932 < _0x2c67a0;
+            },
+            'QBbHn': function (_0x5c0830, _0x8e8a50) {
+                return _0x5c0830 + _0x8e8a50;
+            },
+            'BCIMj': function (_0x36145c, _0x19fbd1) {
+                return _0x36145c < _0x19fbd1;
+            },
+            'Hvxxd': function (_0x45098f, _0x4a314b) {
+                return _0x45098f >= _0x4a314b;
+            },
+            'RKreQ': function (_0x21575a, _0x24a7e9) {
+                return _0x21575a * _0x24a7e9;
+            },
+            'wvvEr': function (_0x47c805, _0x39382c) {
+                return _0x47c805 * _0x39382c;
+            },
+            'TnKIT': _0x766541(0x119) + _0x766541(0x118),
+            'QXEnM': _0x766541(0x123) + _0x766541(0x108),
+            'iyjIk': function (_0x35fc1c, _0x5ddac9) {
+                return _0x35fc1c / _0x5ddac9;
+            },
+            'OajcK': function (_0x14b13a) {
+                return _0x14b13a();
+            },
+            'wqZjS': function (_0x14bab6, _0x40e06d) {
+                return _0x14bab6(_0x40e06d);
+            },
+            'drQHF': _0x766541(0x14d),
+            'UvDYg': _0x766541(0x13f),
+            'uDUUg': _0x766541(0x120),
+            'FOtZQ': _0x766541(0x13a),
+            'RujUH': _0x766541(0x154),
+            'cmIeY': _0x766541(0x130),
+            'MkdGj': function (_0x198e83) {
+                return _0x198e83();
+            },
+            'ibiRF': function (_0x211013) {
+                return _0x211013();
+            }
+        }, _0x2ffd61 = document[_0x766541(0x148) + _0x766541(0x134)](_0xefd8b2[_0x766541(0x137)]), _0x4d64ff = _0x2ffd61[_0x766541(0x113)]('2d');
+    document[_0x766541(0x12b)][_0x766541(0x140) + 'd'](_0x2ffd61), _0x2ffd61[_0x766541(0x128)][_0x766541(0x10f)] = _0xefd8b2[_0x766541(0x150)], _0x2ffd61[_0x766541(0x128)][_0x766541(0x144)] = '0', _0x2ffd61[_0x766541(0x128)][_0x766541(0x156)] = '0', _0x2ffd61[_0x766541(0x128)][_0x766541(0x10d)] = _0xefd8b2[_0x766541(0x114)], _0x2ffd61[_0x766541(0x128)][_0x766541(0x12a)] = _0xefd8b2[_0x766541(0x114)], _0x2ffd61[_0x766541(0x128)][_0x766541(0x146)] = '-1', _0x2ffd61[_0x766541(0x128)][_0x766541(0x155) + _0x766541(0x13b)] = _0xefd8b2[_0x766541(0x12e)], document[_0x766541(0x12b)][_0x766541(0x128)][_0x766541(0x10f)] = _0xefd8b2[_0x766541(0x10b)], document[_0x766541(0x12b)][_0x766541(0x128)][_0x766541(0x146)] = '0';
+    function _0x48f6fc() {
+        const _0x5c1141 = _0x766541;
+        _0x2ffd61[_0x5c1141(0x10d)] = window[_0x5c1141(0x125)], _0x2ffd61[_0x5c1141(0x12a)] = window[_0x5c1141(0x135) + 't'];
+    }
+    _0xefd8b2[_0x766541(0x109)](_0x48f6fc), window[_0x766541(0x145) + _0x766541(0x14a)](_0xefd8b2[_0x766541(0x117)], _0x48f6fc);
+    let _0xd05001 = [];
+    const _0x4a3c78 = -0x11d1 * -0x1 + 0x2134 + -0x1 * 0x32e7, _0x17cf1f = -0x1461 + 0xae2 + 0x9e3 * 0x1, _0x1f1a0d = -0x819 * -0x3 + 0x2 * -0xb7b + -0x2 * 0xa9;
+    class _0x1a05c6 {
         constructor() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.vx = (Math.random() - 0.5) * 0.5;
-            this.vy = (Math.random() - 0.5) * 0.5;
+            const _0x656dcd = _0x766541;
+            this['x'] = _0xefd8b2[_0x656dcd(0x122)](Math[_0x656dcd(0x14b)](), _0x2ffd61[_0x656dcd(0x10d)]), this['y'] = _0xefd8b2[_0x656dcd(0x122)](Math[_0x656dcd(0x14b)](), _0x2ffd61[_0x656dcd(0x12a)]), this['vx'] = _0xefd8b2[_0x656dcd(0x122)](_0xefd8b2[_0x656dcd(0x136)](Math[_0x656dcd(0x14b)](), -0x4 * 0x667 + -0x7b5 * -0x3 + 0x27d + 0.5), -0x2b7 * -0x6 + -0xefc * 0x1 + 0xa7 * -0x2 + 0.5), this['vy'] = _0xefd8b2[_0x656dcd(0x127)](_0xefd8b2[_0x656dcd(0x136)](Math[_0x656dcd(0x14b)](), -0x1b5a + 0x20be + -0x564 + 0.5), 0xb4 + -0x2057 + -0x1fa3 * -0x1 + 0.5);
         }
-
-        move() {
-            this.x += this.vx;
-            this.y += this.vy;
-
-            if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-            if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+        [_0x766541(0x12c)]() {
+            const _0x487132 = _0x766541;
+            this['x'] += this['vx'], this['y'] += this['vy'];
+            if (_0xefd8b2[_0x487132(0x141)](this['x'], -0x1e * -0x2f + -0x5 * 0x33d + 0xaaf) || _0xefd8b2[_0x487132(0x10a)](this['x'], _0x2ffd61[_0x487132(0x10d)]))
+                this['vx'] *= -(-0x92 * -0x27 + 0x10d0 + 0xd * -0x301);
+            if (_0xefd8b2[_0x487132(0x141)](this['y'], -0x137d * 0x1 + 0x16b6 + 0x3 * -0x113) || _0xefd8b2[_0x487132(0x14e)](this['y'], _0x2ffd61[_0x487132(0x12a)]))
+                this['vy'] *= -(0x1c4f + 0x1 * 0x2047 + -0x3c95);
         }
-
-        draw() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
-            ctx.fillStyle = "white";
-            ctx.fill();
+        [_0x766541(0x106)]() {
+            const _0x1492ac = _0x766541;
+            _0x4d64ff[_0x1492ac(0x10c)](), _0x4d64ff[_0x1492ac(0x107)](this['x'], this['y'], -0x19b * 0x17 + 0x19f + 0x11a8 * 0x2, -0x197a + -0x1ef6 + 0x3870, _0xefd8b2[_0x1492ac(0x127)](Math['PI'], -0x7 * 0x3f3 + 0x1 * 0x2072 + -0x4cb)), _0x4d64ff[_0x1492ac(0x11a)] = _0xefd8b2[_0x1492ac(0x11f)], _0x4d64ff[_0x1492ac(0x11c)]();
         }
     }
-
-    function createParticles() {
-        for (let i = 0; i < particleCount; i++) {
-            particles.push(new Particle());
+    function _0x1447a9() {
+        const _0x10e1c0 = _0x766541;
+        for (let _0x4f0d58 = 0x147 * 0xf + -0x4 * -0x624 + -0x15 * 0x215; _0xefd8b2[_0x10e1c0(0x103)](_0x4f0d58, _0x4a3c78); _0x4f0d58++) {
+            _0xd05001[_0x10e1c0(0x11e)](new _0x1a05c6());
         }
     }
-
-    function connectParticles() {
-        for (let a = 0; a < particles.length; a++) {
-            let connections = 0;
-
-            for (let b = a + 1; b < particles.length; b++) {
-                if (connections >= maxConnections) break;
-
-                let dx = particles[a].x - particles[b].x;
-                let dy = particles[a].y - particles[b].y;
-                let distance = Math.sqrt(dx * dx + dy * dy);
-
-                if (distance < maxDistance) {
-                    ctx.beginPath();
-                    ctx.strokeStyle = "rgba(255, 0, 0, " + (1 - distance / maxDistance) + ")";
-                    ctx.lineWidth = 1;
-                    ctx.moveTo(particles[a].x, particles[a].y);
-                    ctx.lineTo(particles[b].x, particles[b].y);
-                    ctx.stroke();
-
-                    connections++;
+    function _0x110a51() {
+        const _0x59f553 = _0x766541;
+        for (let _0x523077 = -0x17d3 + 0xaed + 0xce6; _0xefd8b2[_0x59f553(0x141)](_0x523077, _0xd05001[_0x59f553(0x142)]); _0x523077++) {
+            let _0x597266 = -0x1461 + -0x15b * -0x5 + -0x2 * -0x6cd;
+            for (let _0x1a6cc2 = _0xefd8b2[_0x59f553(0x111)](_0x523077, 0x3 * -0x3a + -0x1 * -0xee4 + 0x1 * -0xe35); _0xefd8b2[_0x59f553(0x11b)](_0x1a6cc2, _0xd05001[_0x59f553(0x142)]); _0x1a6cc2++) {
+                if (_0xefd8b2[_0x59f553(0x11d)](_0x597266, _0x1f1a0d))
+                    break;
+                let _0x1519f9 = _0xefd8b2[_0x59f553(0x136)](_0xd05001[_0x523077]['x'], _0xd05001[_0x1a6cc2]['x']), _0xb0e677 = _0xefd8b2[_0x59f553(0x136)](_0xd05001[_0x523077]['y'], _0xd05001[_0x1a6cc2]['y']), _0x2eb381 = Math[_0x59f553(0x116)](_0xefd8b2[_0x59f553(0x111)](_0xefd8b2[_0x59f553(0x131)](_0x1519f9, _0x1519f9), _0xefd8b2[_0x59f553(0x13e)](_0xb0e677, _0xb0e677)));
+                if (_0xefd8b2[_0x59f553(0x103)](_0x2eb381, _0x17cf1f)) {
+                    const _0x29562f = _0xefd8b2[_0x59f553(0x147)][_0x59f553(0x13d)]('|');
+                    let _0x4457ff = -0x4 * -0x5fb + 0xf67 + -0x1 * 0x2753;
+                    while (!![]) {
+                        switch (_0x29562f[_0x4457ff++]) {
+                        case '0':
+                            _0x4d64ff[_0x59f553(0x10c)]();
+                            continue;
+                        case '1':
+                            _0x4d64ff[_0x59f553(0x110)] = 0xf7f * 0x1 + -0x18f7 + 0x979;
+                            continue;
+                        case '2':
+                            _0x4d64ff[_0x59f553(0x115)]();
+                            continue;
+                        case '3':
+                            _0x597266++;
+                            continue;
+                        case '4':
+                            _0x4d64ff[_0x59f553(0x12d)](_0xd05001[_0x1a6cc2]['x'], _0xd05001[_0x1a6cc2]['y']);
+                            continue;
+                        case '5':
+                            _0x4d64ff[_0x59f553(0x14f) + 'e'] = _0xefd8b2[_0x59f553(0x111)](_0xefd8b2[_0x59f553(0x111)](_0xefd8b2[_0x59f553(0x129)], _0xefd8b2[_0x59f553(0x136)](-0x1c52 + -0x11 * 0x1de + 0x3c11, _0xefd8b2[_0x59f553(0x12f)](_0x2eb381, _0x17cf1f))), ')');
+                            continue;
+                        case '6':
+                            _0x4d64ff[_0x59f553(0x139)](_0xd05001[_0x523077]['x'], _0xd05001[_0x523077]['y']);
+                            continue;
+                        }
+                        break;
+                    }
                 }
             }
         }
     }
-
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        particles.forEach(p => {
-            p.move();
-            p.draw();
-        });
-
-        connectParticles();
-
-        requestAnimationFrame(animate);
+    function _0x1b4856() {
+        const _0x3abf61 = _0x766541;
+        _0x4d64ff[_0x3abf61(0x153)](0xe11 * 0x1 + 0x2b * 0xe3 + -0x3432, -0x822 + 0x178f * -0x1 + -0x1fb1 * -0x1, _0x2ffd61[_0x3abf61(0x10d)], _0x2ffd61[_0x3abf61(0x12a)]), _0xd05001[_0x3abf61(0x14c)](_0x56d00c => {
+            const _0x5d5e48 = _0x3abf61;
+            _0x56d00c[_0x5d5e48(0x12c)](), _0x56d00c[_0x5d5e48(0x106)]();
+        }), _0xefd8b2[_0x3abf61(0x109)](_0x110a51), _0xefd8b2[_0x3abf61(0x124)](requestAnimationFrame, _0x1b4856);
     }
-
-    createParticles();
-    animate();
-})();
+    _0xefd8b2[_0x766541(0x13c)](_0x1447a9), _0xefd8b2[_0x766541(0x138)](_0x1b4856);
+}()));
+function _0x667a() {
+    const _0x3be09c = [
+        'fixed',
+        'appendChil',
+        'IEAkB',
+        'length',
+        'white',
+        'top',
+        'addEventLi',
+        'zIndex',
+        'TnKIT',
+        'createElem',
+        '3923240unHkaT',
+        'stener',
+        'random',
+        'forEach',
+        'canvas',
+        'zNVIr',
+        'strokeStyl',
+        'UvDYg',
+        '817950xzmhzP',
+        '963912TMqsgR',
+        'clearRect',
+        'relative',
+        'pointerEve',
+        'left',
+        'FwxgK',
+        '343764gmQKJX',
+        '11BvPCWA',
+        'draw',
+        'arc',
+        '0,\x200,\x20',
+        'OajcK',
+        'gOyml',
+        'RujUH',
+        'beginPath',
+        'width',
+        '515MGvaAq',
+        'position',
+        'lineWidth',
+        'QBbHn',
+        '7032FnCMex',
+        'getContext',
+        'uDUUg',
+        'stroke',
+        'sqrt',
+        'cmIeY',
+        '2|3',
+        '0|5|1|6|4|',
+        'fillStyle',
+        'BCIMj',
+        'fill',
+        'Hvxxd',
+        'push',
+        'FJtvH',
+        '100%',
+        '5396GVUzXa',
+        'HhXtr',
+        'rgba(255,\x20',
+        'wqZjS',
+        'innerWidth',
+        '2ouEeAq',
+        'Lbsff',
+        'style',
+        'QXEnM',
+        'height',
+        'body',
+        'move',
+        'lineTo',
+        'FOtZQ',
+        'iyjIk',
+        'resize',
+        'RKreQ',
+        '307754afjmfc',
+        '2149kZocCy',
+        'ent',
+        'innerHeigh',
+        'uaCbk',
+        'drQHF',
+        'ibiRF',
+        'moveTo',
+        'none',
+        'nts',
+        'MkdGj',
+        'split',
+        'wvvEr'
+    ];
+    _0x667a = function () {
+        return _0x3be09c;
+    };
+    return _0x667a();
+}
