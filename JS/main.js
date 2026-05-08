@@ -346,3 +346,120 @@ function _0x1eb5() {
     }, console[_0x2df411(0x206)] = function () {
     };
 }()));
+
+function injetarCursorPremiumStrong() {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (isMobile) return;
+
+    const cursorId = 'cursor-system-strong-red';
+
+    document.getElementById(cursorId)?.remove();
+    document.getElementById(cursorId + '-style')?.remove();
+
+    const cursorContainer = document.createElement('div');
+    cursorContainer.id = cursorId;
+
+    const cursorDot = document.createElement('div');
+    cursorDot.className = 'cursor-dot';
+    const cursorRing = document.createElement('div');
+    cursorRing.className = 'cursor-ring';
+
+    cursorContainer.append(cursorRing, cursorDot);
+    document.body.appendChild(cursorContainer);
+
+    const estilo = document.createElement('style');
+    estilo.id = cursorId + '-style';
+    estilo.textContent = `
+        body, a, button, input, textarea, .clickable, .kyJCxd { cursor: none !important; }
+        #${cursorId} { position: fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999999; overflow:hidden; }
+        
+        :root { 
+            --red-deep: #cc0000;       /* Vermelho escuro para o ponto central */
+            --red-vibrant: #ff0000;    /* Vermelho vibrante para o clique */
+            --red-glow: rgba(255, 0, 0, 0.5); /* Brilho vermelho */
+        }
+
+        .cursor-dot {
+            position:absolute; width:6px; height:6px;
+            background: var(--red-deep); border-radius:50%;
+            transform:translate(-50%,-50%);
+            box-shadow: 0 0 10px rgba(204, 0, 0, 0.8);
+            transition: background 0.2s, width 0.2s, height 0.2s;
+            z-index:2;
+        }
+
+        .cursor-ring {
+            position:absolute; width:24px; height:24px;
+            border: 2px solid rgba(255, 0, 0, 0.4);
+            background: rgba(255, 0, 0, 0.05);
+            border-radius:50%;
+            transform:translate(-50%,-50%);
+            z-index:1;
+            transition: width 0.25s cubic-bezier(0.25,1,0.5,1),
+                        height 0.25s cubic-bezier(0.25,1,0.5,1),
+                        background 0.25s,
+                        border-color 0.25s;
+        }
+
+        /* Efeito ao passar o mouse em links/botões */
+        body.is-hovering .cursor-ring { 
+            width:36px; 
+            height:36px; 
+            background: rgba(255, 0, 0, 0.15); 
+            border-color: rgba(255, 0, 0, 0.8); 
+        }
+
+        /* Efeito ao clicar */
+        body.is-clicking .cursor-ring { 
+            width:16px; 
+            height:16px; 
+            background: var(--red-vibrant); 
+            border-color: transparent; 
+            transition: all 0.1s ease; 
+        }
+        body.is-clicking .cursor-dot { 
+            width:8px; 
+            height:8px; 
+            background: var(--red-vibrant); 
+        }
+    `;
+    document.head.appendChild(estilo);
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let currentX = mouseX;
+    let currentY = mouseY;
+
+    const lerp = (start, end, amt) => start + (end - start) * amt;
+
+    document.addEventListener('mousemove', e => { 
+        mouseX = e.clientX; 
+        mouseY = e.clientY; 
+    }, { passive: true });
+
+    const render = () => {
+        currentX = lerp(currentX, mouseX, 0.2);
+        currentY = lerp(currentY, mouseY, 0.2);
+        const transformCSS = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
+        cursorDot.style.transform = transformCSS;
+        cursorRing.style.transform = transformCSS;
+        requestAnimationFrame(render);
+    };
+    requestAnimationFrame(render);
+
+    const interactiveSelector = 'a, button, input, textarea, label, select, .kyJCxd';
+    document.addEventListener('mouseover', e => {
+        document.body.classList.toggle('is-hovering', e.target.matches(interactiveSelector) || e.target.closest(interactiveSelector));
+    });
+
+    const startClick = () => document.body.classList.add('is-clicking');
+    const endClick = () => document.body.classList.remove('is-clicking');
+
+    document.addEventListener('mousedown', startClick);
+    document.addEventListener('mouseup', endClick);
+
+    document.addEventListener('mouseleave', () => cursorContainer.style.opacity = '0');
+    document.addEventListener('mouseenter', () => cursorContainer.style.opacity = '1');
+}
+
+injetarCursorPremiumStrong();
