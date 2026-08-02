@@ -1,0 +1,79 @@
+/* Estilo geral do corpo da página */
+body {
+    width: auto;
+    height: auto;
+    color: white;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Proteção contra seleção de texto */
+body {
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+/* Estilo da lista de créditos */
+.bodyul h3 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bodyul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    list-style: none;
+    margin: 0;
+    padding: 12px 20px;
+
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,0,0,.3);
+    box-shadow: 0 0 20px rgba(255,0,0,.15);
+}
+
+.mover-direita2 {
+  margin-left: 6px;
+}
+
+/* Cores personalizadas para texto */
+.corRed {
+    color: red;
+}
+
+/* Centralização de conteúdo */
+.centro2 {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Estilo para imagens de perfil */
+.img3 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px rgb(255, 255, 255);
+}

@@ -1,0 +1,273 @@
+/* Estilo do fundo principal da página */
+body {
+  width: auto;
+  height: auto;
+  color: white;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Classe para mover elementos para a direita */
+.mover-direita1 {
+  margin-left: 20px;
+}
+
+.mover-direita2 {
+  margin-left: 6px;
+}
+
+/* Estilo da lista de créditos */
+.bodyul h3 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bodyul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    list-style: none;
+    margin: 0;
+    padding: 12px 20px;
+
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,0,0,.3);
+    box-shadow: 0 0 20px rgba(255,0,0,.15);
+}
+
+/* Centralização de conteúdo */
+.JhowImage {
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.centro2 {
+  display: flex;
+  justify-content: center;
+}
+
+/* Definição de cores personalizadas */
+.corWheat {
+  color: wheat;
+}
+.corRed {
+  color: red;
+}
+
+.corVerde {
+  color: rgb(71, 153, 8);
+}
+
+/* linguagens */
+.linguagens-conteiner {
+    margin: 20px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Lista com ícones */
+.lista-com-icones {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.lista-com-icones li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.icone-linguagem {
+    height: 1em;
+    width: auto;
+    margin-right: 10px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
+} /* fim linguagens */
+
+/* Estilos das imagens */
+.img1 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid red;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.img2 {
+  width: 100px;
+  height: 75px;
+}
+
+.img3 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 5px solid rgb(255, 255, 255);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Proteção contra seleção de texto */
+body {
+  -webkit-touch-callout: none; 
+  -webkit-user-select: none; 
+  -khtml-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+}
+
+body, html {
+  touch-action: manipulation;
+  -webkit-touch-callout: none; 
+  -webkit-user-select: none; 
+  -khtml-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+}
+
+/* Definição das animações */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Adiciona transição suave a todos os elementos */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Animações definidas */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Aplicação da animação ao cabeçalho */
+header {
+    margin-top: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Adiciona transição suave a todos os elementos */
+* {
+  transition: all 0.3s ease;
+}
+
+.download-seleção {
+  text-align: center;
+  width: 100%;
+}
+
+.download-botao {
+    display: inline-block;
+    padding: 12px 30px;
+
+    border: 2px solid rgba(248, 1, 1, 0.858);
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+    transition: all 0.3s ease;
+}
+
+.download-botao:hover {
+    background: rgba(255, 0, 0, 0.15);
+    transform: scale(1.05);
+    animation: pulse 0.5s ease infinite;
+}
+
+.botoes-flutuantes {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.botoes-flutuantes a {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #111;
+    border: 3px solid red;
+    border-radius: 50%;
+    box-shadow: 0 0 20px red;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.botoes-flutuantes a:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 30px red;
+}
+
+.botoes-flutuantes img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+h1 {
+  color: red;
+  text-shadow: 0 0 10px red;
+}
